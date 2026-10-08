@@ -1,0 +1,7 @@
+{
+  "name": "fixture-v22",
+  "private": true,
+  "dependencies": {
+    "@angular/core": "^22.1.0"
+  }
+}

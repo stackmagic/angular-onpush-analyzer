@@ -1,0 +1,7 @@
+{
+  "name": "fixture-v21",
+  "private": true,
+  "devDependencies": {
+    "@angular/core": "~21.2.0"
+  }
+}

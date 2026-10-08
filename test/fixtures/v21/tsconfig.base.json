@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "ES2020",
+    "moduleResolution": "bundler",
+    "experimentalDecorators": true,
+    "baseUrl": ".",
+    "paths": {
+      "@acme/components": ["libs/components/src"]
+    }
+  }
+}

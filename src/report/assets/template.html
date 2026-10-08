@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>OnPush migration report</title>
+<style>
+{{style}}
+</style>
+</head>
+<body>
+<header class="page-header">
+  <h1><span id="workspace"></span> <span class="muted">OnPush migration</span></h1>
+  <p id="meta" class="muted"></p>
+</header>
+<main>
+  <section id="list-view">
+    <div id="summary" class="summary"></div>
+    <table class="components">
+      <thead>
+        <tr>
+          <th rowspan="2"><button type="button" data-sort="name">Component</button></th>
+          <th rowspan="2"><button type="button" data-sort="state">State</button></th>
+          <th rowspan="2"><button type="button" data-sort="ready">Ready</button></th>
+          <th rowspan="2" class="num"><button type="button" data-sort="wave">Wave</button></th>
+          <th colspan="2" class="group">Dependents</th>
+          <th colspan="2" class="group">Dependencies</th>
+          <th rowspan="2" class="num"><button type="button" data-sort="warnings">Warnings</button></th>
+        </tr>
+        <tr>
+          <th class="num"><button type="button" data-sort="dependents">direct</button></th>
+          <th class="num"><button type="button" data-sort="transitiveDependents">transitive</button></th>
+          <th class="num"><button type="button" data-sort="dependencies">direct</button></th>
+          <th class="num"><button type="button" data-sort="transitiveDependencies">transitive</button></th>
+        </tr>
+        <tr id="filters" class="filters">
+          <td>
+            <div class="name-filters">
+              <input id="query" type="search" placeholder="Search name, selector or file" aria-label="Search name, selector or file">
+              <select id="project" aria-label="Project">
+                <option value="">All projects</option>
+              </select>
+            </div>
+          </td>
+          <td>
+            <select id="state" aria-label="Change detection">
+              <option value="">All states</option>
+              <option value="eager">Eager</option>
+              <option value="onpush">OnPush</option>
+            </select>
+          </td>
+          <td>
+            <select id="ready" aria-label="Ready to migrate">
+              <option value="">All</option>
+              <option value="ready">Ready</option>
+              <option value="not-ready">Not ready</option>
+            </select>
+          </td>
+          <td colspan="6" class="num"><output id="match-count" class="muted"></output></td>
+        </tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+    <p id="empty" class="empty muted" hidden>No components match the filters.</p>
+  </section>
+  <section id="detail-view" hidden></section>
+</main>
+<script id="report-data" type="application/json">{{data}}</script>
+<script type="module">
+{{script}}
+</script>
+</body>
+</html>

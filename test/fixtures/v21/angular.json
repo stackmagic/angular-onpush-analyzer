@@ -1,0 +1,8 @@
+{
+  "version": 1,
+  "projects": {
+    "web": { "projectType": "application", "root": "apps/web", "sourceRoot": "apps/web/src" },
+    "web-admin": { "projectType": "application", "root": "apps/web/admin/" },
+    "components": { "projectType": "library", "root": "libs/components", "sourceRoot": "libs/components/src" }
+  }
+}

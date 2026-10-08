@@ -1,0 +1,7 @@
+<h1>{{ title }}</h1>
+@if (title) {
+  <shared-button (click)="title = ''">Reset</shared-button>
+} @else {
+  <app-list [items]="[]"></app-list>
+}
+<router-outlet></router-outlet>
